@@ -13,7 +13,7 @@ const greeting = (word) => {
   return word.toUpperCase();
 };
 
-const speaker = (message, callback) => greeting(message);
+const speaker = (message, callback) => callback(message);
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,7 +94,7 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  arr.forEach( (val, index, arr)  => {
+  arr.forEach( (val, index, arr) => {
     if (val % 3 === 2) {
       arr.pop();
     }
@@ -146,7 +146,7 @@ Return the resulting output array.
 const fizzbuzz = (arr) => {
   let outputArr = [];
   arr.forEach(value => {
-    if (value % 3  === 0 && value %5 === 0) {
+    if (value % 3 === 0 && value %5 === 0) {
       outputArr.push('Fizz Buzz');
     } else if (value % 5 === 0) {
       outputArr.push('Buzz');
