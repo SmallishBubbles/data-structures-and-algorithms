@@ -7,8 +7,8 @@ Data structure and algorithm labs from:
 
 ### Collaborators
 <!-- list everyone I pair program with and ask questions of -->
-for-each with Peter Lee
-value-vs-reference with Renee Messic & Joachen Busch
+* for-each with Peter Lee
+* value-vs-reference with Renee Messic & Joachen Busch
 
 ### Resources
 <!-- list websites referenced, tutorials, etc -->
