@@ -216,6 +216,28 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
+
+  // in class solution
+  let weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+  const compare = (a, b) => {
+    if (weekDays.indexOf(a.dayOfWeek) > weekDays.indexOf(b.dayOfWeek)){
+      return 1;
+    } else if (weekDays.indexOf(a.dayOfWeek) < weekDays.indexOf(b.dayOfWeek)){
+      return -1;
+    } else {
+      if(a.end > b.end){
+        return 1;
+      } else if(a.end > b.end){
+        return -1;
+      } else {
+        return 0;
+      }
+    }
+  }
+  arr.sort(compare);
+
+
+  // my solution
   let weekOrder = {
     Monday: 1,
     Tuesday: 2,
