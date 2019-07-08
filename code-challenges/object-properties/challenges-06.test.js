@@ -12,9 +12,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true };
 
-const getCourseKeys = (obj) => {
-  // Solution code here...
-};
+const getCourseKeys = (obj) => Object.keys(obj);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -70,7 +68,9 @@ let characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  for (var i = 0; i < arr.length; i++){
+    houses.push(arr[i].house);
+  }
   return houses;
 };
 
@@ -87,7 +87,16 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  let present = false;
+  for (let i = 0; i < arr.length; i++){
+    let allCurrentValues = Object.values(arr[i]);
+    if (allCurrentValues[0] === character){
+      if(allCurrentValues[2].length > 0){
+        present = true;
+      }
+    }
+  }
+  return present;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,7 +108,16 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let hasChildren = false;
+  for (let i = 0; i < arr.length; i++){
+    let allCurrentEntries = Object.entries(arr[i]);
+    if (allCurrentEntries[0][1] === character) {
+      if(allCurrentEntries[2][1].length > 0){
+        hasChildren = true;
+      }
+    }
+  }
+  return hasChildren;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -109,7 +127,16 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  let totalCharacters = 0;
+  for (let i = 0; i < arr.length; i++){
+    let allValues = Object.values(arr[i]).flat();
+    for (let j = 0; j < allValues.length-1; j++){
+      if (allValues[j] !== null){
+        totalCharacters ++;
+      }
+    }
+  }
+  return totalCharacters;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -124,7 +151,26 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 
 const houseSize = (arr) => {
   const sizes = [];
-  // Solution code here...
+  let allHoueses = getHouses(arr);
+  for ( let i = 0; i < allHoueses.length; i++){
+    sizes.push({
+      house: allHoueses[i],
+      members: 0,
+    })
+  }
+
+  for ( let i = 0; i < sizes.length; i++ ){
+    if (arr[i].name){
+      sizes[i].members ++;
+    }
+    if (arr[i].spouse){
+      sizes[i].members ++;
+    }
+    if (arr[i].children){
+      sizes[i].members += arr[i].children.length;
+    }
+  }
+
   return sizes;
 };
 
@@ -148,7 +194,26 @@ const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
 
 const houseSurvivors = (arr) => {
   const survivors = [];
-  // Solution code here...
+  let allHoueses = getHouses(arr);
+  for ( let i = 0; i < allHoueses.length; i++){
+    survivors.push({
+      house: allHoueses[i],
+      members: 0,
+    })
+  }
+
+  for ( let i = 0; i < survivors.length; i++ ){
+    if (arr[i].name){
+      survivors[i].members ++;
+    }
+    if (arr[i].spouse && deceasedSpouses.indexOf(arr[i].spouse) === -1){
+      survivors[i].members ++;
+    }
+    if (arr[i].children){
+      survivors[i].members += arr[i].children.length;
+    }
+  }
+
   return survivors;
 };
 
