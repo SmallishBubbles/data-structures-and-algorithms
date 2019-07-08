@@ -99,13 +99,8 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  let brokenString = str.split('');
-  for (let i = 0; i < brokenString.length; i++){
-    if (/[aAeEiIoOuU]/.test(brokenString[i])){
-      brokenString[i] = '_'
-    }
-  }
-  return brokenString.join('');
+  const match = /[aAeEiIoOuU]/g;
+  return str.replace(match, '_')
 };
 
 /* ------------------------------------------------------------------------------------------------
