@@ -9,7 +9,11 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) => {
-  // Solution code here...
+  return arr.map(word => {
+    let letters = word.split('');
+    letters[0] = letters[0].toUpperCase();
+    return letters.join('');
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -84,7 +88,17 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+  return arr.filter(person => {
+    if(person.mass > 77){
+      return true;
+    }
+  }).reduce((string, obj) =>{
+    if(string === ''){
+      return obj.name;
+    } else {
+      return string + ' - ' + obj.name;
+    }
+  },'')
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,7 +116,16 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  let sorted = arr.sort((a, b) => {
+    if (a[property] < b[property]) {
+      return -1;
+    }
+    if (a[property] > b[property]) {
+      return 1;
+    }
+    return 0;
+  })
+  return sorted;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,7 +141,7 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-// Solution code here...
+  return /^https:\/\//.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -140,8 +163,28 @@ Here is a sample board:
 ];
 ------------------------------------------------------------------------------------------------ */
 
+
+
+
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  let win = false;
+
+  const helpCheck = (first, second, third) => {
+    if (first === second && second === third && first !== ''){
+      win = true;
+    }
+  }
+
+  helpCheck(board[0][0], board[0][1], board[0][2]);
+  helpCheck(board[1][0], board[1][1], board[1][2]);
+  helpCheck(board[2][0], board[2][1], board[2][2]);
+  helpCheck(board[0][0], board[1][0], board[2][0]);
+  helpCheck(board[0][1], board[1][1], board[2][1]);
+  helpCheck(board[0][2], board[1][2], board[2][2]);
+  helpCheck(board[0][0], board[1][1], board[2][2]);
+  helpCheck(board[0][2], board[1][1], board[2][0]);
+
+  return win;
 };
 
 /* ------------------------------------------------------------------------------------------------
