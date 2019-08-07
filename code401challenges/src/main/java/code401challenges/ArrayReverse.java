@@ -1,5 +1,6 @@
 // import arrays so that we can print them nicely
 import java.util.Arrays;
+package code401challenges;
 
 public class ArrayReverse {
   public static void main(String[] args) {
