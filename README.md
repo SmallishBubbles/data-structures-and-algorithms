@@ -7,7 +7,7 @@ Data structure and algorithm labs from:
 
 # Java Challenge Breakdown
 ## [Reverse an Array](/moreREADME/arrayReverse.md)
-## [Insert into an array](/moreREADME/arrayReverse.md)
+## [Insert into an array](/moreREADME/arrayShift.md)
 
 # Collaborators
 <!-- list everyone I pair program with and ask questions of -->
