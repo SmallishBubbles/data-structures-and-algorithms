@@ -5,22 +5,26 @@ Data structure and algorithm labs from:
 * Code Fellows 301 JavaScript course
 * Code Fellows 401 JavaScript coursed
 
-# Java Challenge Breakdown
-## [Reverse an Array](/moreREADME/arrayReverse.md)
-## [Insert into an array](/moreREADME/arrayShift.md)
+## Java Challenge Breakdown
+### [Reverse an Array](/moreREADME/arrayReverse.md)
+### [Insert Into an Array](/moreREADME/arrayShift.md)
+### [Binary Search in a Sorted 1D Array](/moreREADME/binarySearch.md)
 
 # Collaborators
 <!-- list everyone I pair program with and ask questions of -->
-* Peter Lee
-* Renee Messic
-* Joachen Busch
-* Kevin Couture
+* Brandon Hurrington
+* Chris Coulon
+* Jack Kinne
 * Jackie 
 * Jane Hur
-* Jack Kinne
-* Brandon Hurrington
-* Nicholas Paro
+* Joachen Busch
+* Kevin Couture
+* Matt Stuhring
 * Nhu Trinh
+* Nicholas Paro
+* Peter Lee
+* Renee Messic
+* Sapana Poudel
 * Travis Cox
 
 # Resources
