@@ -2,13 +2,18 @@
 
 Data structure and algorithm labs from: 
 
-* Code Fellows 301 JavaScript course
-* Code Fellows 401 JavaScript coursed
+* Code Fellows 301 JavaScript
+* Code Fellows 401 Java
 
-## Java Challenge Breakdown
-### [Reverse an Array](/moreREADME/arrayReverse.md)
-### [Insert Into an Array](/moreREADME/arrayShift.md)
-### [Binary Search in a Sorted 1D Array](/moreREADME/binarySearch.md)
+## Java Challenge Table of Contents
+
+### Code 401 challenges
+* #### [Reverse an Array](/moreREADME/arrayReverse.md)
+* #### [Insert Into an Array](/moreREADME/arrayShift.md)
+* #### [Binary Search in a Sorted 1D Array](/moreREADME/binarySearch.md)
+
+### Data Structures
+* #### [Linked List](/moreREADME/linkedList.md)
 
 # Collaborators
 <!-- list everyone I pair program with and ask questions of -->
@@ -33,4 +38,5 @@ Data structure and algorithm labs from:
 * [Michelle Ferreirae]() instructor for 401 Java
 * Code Fellows eslintrc settings
 * Code Fellows' gitignore settings
-* https://www.w3schools.com/jsref/jsref_concat_string.asp
+* [w3schools: Concat String](https://www.w3schools.com/jsref/jsref_concat_string.asp)
+* [Code Fellows: Singly Linked List](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-05/resources/singly_linked_list.html)
