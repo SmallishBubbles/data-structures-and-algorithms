@@ -14,6 +14,7 @@ Data structure and algorithm labs from:
 
 ### Data Structures
 * #### [Linked List](/moreREADME/linkedList.md)
+  * ##### Linked List Insertions
 
 # Collaborators
 <!-- list everyone I pair program with and ask questions of -->
@@ -40,3 +41,4 @@ Data structure and algorithm labs from:
 * Code Fellows' gitignore settings
 * [w3schools: Concat String](https://www.w3schools.com/jsref/jsref_concat_string.asp)
 * [Code Fellows: Singly Linked List](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-05/resources/singly_linked_list.html)
+* [JUnit assert exception](https://www.baeldung.com/junit-assert-exception)

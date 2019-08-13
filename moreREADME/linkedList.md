@@ -14,19 +14,26 @@ Implement a Singly Linked List Data Structure
 * Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 * Define a method called toString which takes in no arguments and returns a string representing all the values in the Linked List.
 * At no time should an exception or stack trace be shown to the end user. Catch and handle any such exceptions and return a printed value or operation which cleanly represents the state and either stops execution cleanly, or provides the user with clear direction and output.
+* Write the following methods for the Linked List class:
+  * .append(value) which adds a new node with the given value to the end of the list
+  * .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+  * .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 This Linked List implementation has a LinkedList class and a Node class.
 
-Space:
-* O(n)
-
 Method Time Efficiency:
 * insert: O(1)
 * includes: O(n)
 * toString: O(n)
+* append: O(n)
+* insertBefore: O(n)
+* insertAfter: O(n)
+* remove: O(n)
+
+![Linked List Inserts Whiteboard](/assets/linkedListInserts.png)
 
 
 ## API
@@ -41,9 +48,24 @@ Upon creation, the linked list will hold a single `null` value in the head.
 #### insert(value)
 Insert a new value into the __start__ of the list.
 insert time is constant `O(1)`
+#### append(value)
+Append a new value into the __end__ of the list.
+append time is linear `O(n)`
+#### insertBefore(target, value)
+Add a new item to the list directly before the target value.
+If the target value is not part of the list, a `NoSuchElementException` will be thrown.
+insertBefore time is linear `O(n)`
+#### insertAfter(target, value)
+Add a new item to the list directly after the target value.
+If the target value is not part of the list, a `NoSuchElementException` will be thrown.
+insertAfter time is linear `O(n)`
 #### includes(value)
 Check whether a certain value is present in the list. 
 includes time is linear `O(n)`
+#### remove(value)
+Remove the first occurance of a specified value from the list. The removed value will be returned.
+If the specified value is not included in the list, the return value will be `null`
+remove time is linear `O(n)`
 #### toString()
 Print a string representing all the values in the linked list
 toString time is linear `O(n)`
