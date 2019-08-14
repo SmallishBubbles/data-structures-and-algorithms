@@ -26,7 +26,7 @@ public class LinkedListTest {
         testIntegerList.insert(24);
         testIntegerList.insert(13);
         testIntegerList.insert(8);
-        // the order of this list is 8 > 13 > 24 > 8 > null
+        // the order of this list is 8 > 13 > 24 > 12 > null
     }
 
 
@@ -168,6 +168,52 @@ public class LinkedListTest {
     public void testRemove_notIncluded() {
         assertNull("If the value to delete is not included in the list, the return value should be null",
                 testIntegerList.remove(999));
+    }
+
+    // ************************* kth From End Tests *************************
+
+    // Where k is greater than the length of the linked list
+    @Test (expected = NoSuchElementException.class)
+    public void testKthFromEnd_kOutOfBounds() {
+        testIntegerList.kthFromEnd(7);
+    }
+
+    // Where k and the length of the list are the same
+    @Test (expected = NoSuchElementException.class)
+    public void testKthFromEnd_kEqualsLength() {
+        testIntegerList.kthFromEnd(4);
+    }
+
+    // Where k is not a positive integer
+    @Test (expected = NoSuchElementException.class)
+    public void testKthFromEnd_negativeK() {
+        testStringList.kthFromEnd(-2);
+    }
+
+    // Where the linked list is of a size 1
+    @Test
+    public void testKthFromEnd_oneItem() {
+        LinkedList<String> oneItemList = new LinkedList<>();
+        oneItemList.insert("Surprisingly, it's just me!");
+
+        assertEquals("kthFromEnd should still work on a list of one item if k = 0",
+                "Surprisingly, it's just me!", oneItemList.kthFromEnd(0));
+    }
+
+    // “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+    @Test
+    public void testKthFromEnd_kInMiddle() {
+        assertTrue("kthFromEnd should return the value k places from the end of the list",
+                13 == testIntegerList.kthFromEnd(2));
+        assertTrue("kthFromEnd should return the value k places from the end of the list",
+                24 == testIntegerList.kthFromEnd(1));
+    }
+
+    // where k is one less than the list length, and the value returned should be the first item of the list
+    @Test
+    public void testKthFromEnd_kAtStart() {
+        assertTrue("kthFromEnd should return the value at the start of the list if k is one less than the list length",
+                testStringList.kthFromEnd(3).equals("Beaver"));
     }
 
 }
