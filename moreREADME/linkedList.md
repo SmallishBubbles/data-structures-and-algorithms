@@ -18,6 +18,7 @@ Implement a Singly Linked List Data Structure
   * .append(value) which adds a new node with the given value to the end of the list
   * .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
   * .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+* Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
 
 ## Approach & Efficiency
@@ -32,8 +33,22 @@ Method Time Efficiency:
 * insertBefore: O(n)
 * insertAfter: O(n)
 * remove: O(n)
+* kthFromEnd: O(n)
 
+Method Space Efficiency:
+* All methods: O(1)
+
+### Inserts:
 ![Linked List Inserts Whiteboard](/assets/linkedListInserts.png)
+
+### KthFromEnd:
+#### Approach:
+Jane and I decided to use two pointers (one for `current`, and one for `currentKFromEnd`) in our algorithm because this allowed us to loop through the list only once, rather than twice.
+The pointer k spaces back from current (`currentKFromEnd`) only gets incremented if we've itterated through more than `k` items so far.
+With this method, we also had to check for situations where `k` was out of bounds.
+#### Efficiency:
+This solution has an efficiency of `O(n)`
+![Linked List KthFromEnd Whiteboard](/assets/linkedListKthFromEnd.jpg)
 
 
 ## API
@@ -69,3 +84,7 @@ remove time is linear `O(n)`
 #### toString()
 Print a string representing all the values in the linked list
 toString time is linear `O(n)`
+#### kthFromEnd(k)
+Return the value of the elment `k` places before the end of the list. Must be called with an integer value `O <= k < list length`
+kthFromEnd time is linear `O(n)`
+

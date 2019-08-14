@@ -1,5 +1,7 @@
 package linkedList;
 
+import org.apache.commons.math3.exception.OutOfRangeException;
+
 import java.util.NoSuchElementException;
 
 public class LinkedList<T> {
@@ -112,6 +114,30 @@ public class LinkedList<T> {
             current = current.next;
         }
         return false;
+    }
+
+    public T kthFromEnd(int k){
+        int counter = 0;
+        Node<T> current = this.head;
+        Node<T> currentKFromEnd = this.head;
+
+        if (k < 0){
+            throw new NoSuchElementException("kthFromEnd must be called with a positive integer");
+        }
+
+        while ( current.next != null ) {
+            counter ++;
+            if ( counter > k ) {
+                currentKFromEnd = currentKFromEnd.next;
+            }
+            current = current.next;
+        }
+
+        if ( counter < k ) {
+            throw new NoSuchElementException("kthFromEnd must be called with an integer less than the length of the list");
+        } else {
+            return currentKFromEnd.val;
+        }
     }
 
     public String toString(){
