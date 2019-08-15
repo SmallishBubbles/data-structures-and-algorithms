@@ -158,4 +158,25 @@ public class LinkedList<T> {
         return allItems;
     }
 
+    public static LinkedList mergeLists(LinkedList one, LinkedList two){
+        Node current1 = one.head;
+        Node current2 = two.head;
+
+        while ( current1.next != null && current2.next != null ) {
+            Node next1 = current1.next;
+            Node next2 = current2.next;
+            current2.next = current1.next;
+            current1.next = current2;
+            current1 = next1;
+            current2 = next2;
+        }
+        if ( current2.next == null ) {
+            current2.next = current1.next;
+            current1.next = current2;
+        } else {
+            current1.next = current2;
+        }
+        return one;
+    }
+
 }
