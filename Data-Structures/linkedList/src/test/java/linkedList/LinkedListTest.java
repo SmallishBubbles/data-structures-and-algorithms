@@ -170,6 +170,13 @@ public class LinkedListTest {
                 testIntegerList.remove(999));
     }
 
+    @Test
+    public void testRemove_firstItem() {
+        testIntegerList.remove(8);
+        assertEquals("The remove should work on the first item and not break the list",
+                "List: 13, 24, 12", testIntegerList.toString());
+    }
+
     // ************************* kth From End Tests *************************
 
     // Where k is greater than the length of the linked list
@@ -214,6 +221,66 @@ public class LinkedListTest {
     public void testKthFromEnd_kAtStart() {
         assertTrue("kthFromEnd should return the value at the start of the list if k is one less than the list length",
                 testStringList.kthFromEnd(3).equals("Beaver"));
+    }
+
+    // ************************* merge lists tests *************************
+    @Test
+    public void testMergeLists_sameLength(){
+        // List 1: head -> [1] -> [3] -> [2] -> X
+        // List 2: head -> [5] -> [9] -> [4] -> X
+        // Expected: head -> [1] -> [5] -> [3] -> [9] -> [2] -> [4] -> X
+
+        LinkedList<Integer> list1 = new LinkedList<>();
+        list1.insert(1);
+        list1.append(3);
+        list1.append(2);
+
+        LinkedList<Integer> list2 = new LinkedList<>();
+        list2.insert(5);
+        list2.append(9);
+        list2.append(4);
+
+        assertEquals("The merge should work on two lists of the same length",
+                "List: 1, 5, 3, 9, 2, 4", LinkedList.mergeLists(list1, list2).toString());
+
+    }
+
+    @Test
+    public void testMergeLists_firstShorter(){
+        // List 1: head -> [1] -> [3] -> X
+        // List 2: head -> [5] -> [9] -> [4] -> X
+        // Expected: head -> [1] -> [5] -> [3] -> [9] -> [4] -> X
+
+        LinkedList<Integer> list1 = new LinkedList<>();
+        list1.insert(1);
+        list1.append(3);
+
+        LinkedList<Integer> list2 = new LinkedList<>();
+        list2.insert(5);
+        list2.append(9);
+        list2.append(4);
+
+        assertEquals("The merge should work when the first list is shorter",
+                "List: 1, 5, 3, 9, 4", LinkedList.mergeLists(list1, list2).toString());
+    }
+
+    @Test
+    public void testMergeLists_secondShorter(){
+        // List 1: head -> [1] -> [3] -> [2] -> X
+        // List 2: head -> [5] -> [9] -> X
+        // Expected: head -> [1] -> [5] -> [3] -> [9] -> [2] -> X
+
+        LinkedList<Integer> list1 = new LinkedList<>();
+        list1.insert(1);
+        list1.append(3);
+        list1.append(2);
+
+        LinkedList<Integer> list2 = new LinkedList<>();
+        list2.insert(5);
+        list2.append(9);
+
+        assertEquals("The merge should work when the second list is shorter",
+                "List: 1, 5, 3, 9, 2", LinkedList.mergeLists(list1, list2).toString());
     }
 
 }
