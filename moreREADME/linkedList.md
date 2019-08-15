@@ -50,6 +50,13 @@ With this method, we also had to check for situations where `k` was out of bound
 This solution has an efficiency of `O(n)`
 ![Linked List KthFromEnd Whiteboard](/assets/linkedListKthFromEnd.jpg)
 
+### mergeLists:
+#### Approach:
+Travis and I decided to make two pointers to the next nodes at the start of our while loop, which allowed us to keep pointers for the new head of the second list, and the original "next" of the first list. This allowed us to skip to the next insert spot efficiently.
+#### Efficiency:
+This solution has a time efficiency of `O(n)`and a space efficiency of `O(1)`
+![Linked List mergeLists Whiteboard](/assets/linkedListMergeLists.jpg)
+
 
 ## API
 <!-- Description of each method publicly available to your Linked List -->
@@ -87,4 +94,10 @@ toString time is linear `O(n)`
 #### kthFromEnd(k)
 Return the value of the elment `k` places before the end of the list. Must be called with an integer value `O <= k < list length`
 kthFromEnd time is linear `O(n)`
+
+### Static Methods
+#### mergeLists(LinkedList one, LinkedList two)
+Returns a linked list that "zips" the two original lists together, alternating nodes. Note that mergeLists is destructive to the original lists.
+mergeLists time is linear `O(n)`
+mergeLists space is static `O(1)`
 

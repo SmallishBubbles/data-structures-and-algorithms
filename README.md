@@ -16,6 +16,7 @@ Data structure and algorithm labs from:
 * #### [Linked List](/moreREADME/linkedList.md)
   * ##### Linked List Insertions
   * ##### Linked List kthFromEnd
+  * ##### Linked List mergeLists
 
 # Collaborators
 <!-- list everyone I pair program with and ask questions of -->
