@@ -7,16 +7,18 @@ Data structure and algorithm labs from:
 
 ## Java Challenge Table of Contents
 
-### Code 401 challenges
+### code401challenges
 * #### [Reverse an Array](/moreREADME/arrayReverse.md)
 * #### [Insert Into an Array](/moreREADME/arrayShift.md)
 * #### [Binary Search in a Sorted 1D Array](/moreREADME/binarySearch.md)
 
-### Data Structures
+### Data-Structures
 * #### [Linked List](/moreREADME/linkedList.md)
   * ##### Linked List Insertions
   * ##### Linked List kthFromEnd
   * ##### Linked List mergeLists
+* #### [Stacks and Queues](/moreREADME/stacksAndQueues.md)
+  * ##### Stack and Queue implementations
 
 # Collaborators
 <!-- list everyone I pair program with and ask questions of -->
