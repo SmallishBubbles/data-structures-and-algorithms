@@ -19,6 +19,7 @@ Data structure and algorithm labs from:
   * ##### Linked List mergeLists
 * #### [Stacks and Queues](/moreREADME/stacksAndQueues.md)
   * ##### Stack and Queue implementations
+  * ##### [PseudoQueue implementation](/moreREADME/pseudoQueue.md)
 
 # Collaborators
 <!-- list everyone I pair program with and ask questions of -->
