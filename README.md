@@ -21,6 +21,7 @@ Data structure and algorithm labs from:
   * ##### Stack and Queue implementations
   * ##### [PseudoQueue implementation](/moreREADME/pseudoQueue.md)
   * ##### [AnimalShelter](/moreREADME/animalShelter.md)
+  * ##### [MulitBracketValidation](/moreREADME/multiBracketValidation.md)
 
 # Collaborators
 <!-- list everyone I pair program with and ask questions of -->
