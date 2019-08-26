@@ -2,6 +2,7 @@
 <!-- Short summary or background information -->
 Binary Tree and Binary Search Tree Implementations
 
+___________
 ## Challenge
 <!-- Description of the challenge -->
 * Create a `Node` class that has properties for the value stored in the node, the left child node, and the right child node.
@@ -13,6 +14,7 @@ Binary Tree and Binary Search Tree Implementations
   * Define a method named `add` that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
   * Define a method named `contains` that accepts a value, and returns a `boolean` indicating whether or not the value is in the tree at least once.
 
+_______________
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 I implemented recursive methods for my traversals, add, and contains. I also chose to return an ArrayList containing the tree values from my traversals as I do not have a `size` instance variable to know how large I would need to make an array, and because of the limitations on arrays with generic data types.
@@ -21,6 +23,7 @@ traversals: O(n)
 add: O(log(n))
 contains: O(log(n))
 
+___________
 ## API
 <!-- Description of each method publicly available in each of your trees -->
 #### Binary Tree Traversals
@@ -33,5 +36,7 @@ All of the above plus:
 * __`add(value)`__ adds a value to the binary search tree at the correct location
 * __`contains(value)`__ traverses the binary search tree and returns a `boolean` indicating whether the value is contained within the tree.
 
+_______________
 ## Resources
 * Brian Holt's examples from the Frontend Masters Course _4 Semesters of Computer Science in 5 Hours_
+* Kevin Couture - algorithm brainstorm
