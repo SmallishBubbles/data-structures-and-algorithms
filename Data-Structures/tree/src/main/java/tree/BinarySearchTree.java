@@ -3,11 +3,11 @@ package tree;
 public class BinarySearchTree extends BinaryTree<Integer> {
 
     public BinarySearchTree(Node<Integer> root) {
-        this.root = root;
+        super(root);
     }
 
     public BinarySearchTree() {
-        this(null);
+        super();
     }
 
     public void add(Integer value) {
