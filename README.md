@@ -17,11 +17,15 @@ Data structure and algorithm labs from:
   * ##### Linked List Insertions
   * ##### Linked List kthFromEnd
   * ##### Linked List mergeLists
+
 * #### [Stacks and Queues](/moreREADME/stacksAndQueues.md)
   * ##### Stack and Queue implementations
   * ##### [PseudoQueue implementation](/moreREADME/pseudoQueue.md)
   * ##### [AnimalShelter](/moreREADME/animalShelter.md)
   * ##### [MulitBracketValidation](/moreREADME/multiBracketValidation.md)
+
+* #### [Trees](/moreREADME/trees.md)
+  * ##### Binary Tree and Binary Search Tree Implementations
 
 # Collaborators
 <!-- list everyone I pair program with and ask questions of -->
