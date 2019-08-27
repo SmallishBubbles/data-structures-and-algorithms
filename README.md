@@ -26,6 +26,7 @@ Data structure and algorithm labs from:
 
 * #### [Trees](/moreREADME/trees.md)
   * ##### Binary Tree and Binary Search Tree Implementations
+  * ##### [FizzBuzzTree](/moreREADME/fizzBuzzTree.md)
 
 # Collaborators
 <!-- list everyone I pair program with and ask questions of -->
