@@ -14,6 +14,11 @@ public class BinaryTree<T> {
     }
 
 
+    public Node<T> getRoot() {
+        return this.root;
+    }
+
+
     // these traversal implementations are based on the JavaScript examples mentioned in the
     // Frontend Masters "4 semesters of Computer Science in 5 hours" course
     // By Brian Holt
