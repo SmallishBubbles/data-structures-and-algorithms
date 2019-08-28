@@ -1,6 +1,8 @@
 package tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTree<T> {
     Node<T> root;
@@ -84,6 +86,31 @@ public class BinaryTree<T> {
             array.add(root.value);
         }
         return array;
+    }
+
+
+    public static ArrayList breadthFirst(BinaryTree tree) {
+        ArrayList arrayList = new ArrayList<>();
+        Queue<Node> queue = new LinkedList<>();
+
+        if ( tree.root != null ) {
+            queue.add(tree.root);
+
+            while ( queue.peek() != null ) {
+                Node currentNode = queue.remove();
+                System.out.println(currentNode.value);
+                arrayList.add(currentNode.value);
+
+                if ( currentNode.left != null ) {
+                    queue.add(currentNode.left);
+                }
+                if ( currentNode.right != null ) {
+                    queue.add(currentNode.right);
+                }
+            }
+        }
+
+        return arrayList;
     }
 
 

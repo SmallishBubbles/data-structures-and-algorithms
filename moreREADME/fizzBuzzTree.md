@@ -18,7 +18,7 @@ Conduct “FizzBuzz” on a tree while traversing through it. Change the values 
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-I a recursive preorder traversal to go through the entire tree. For my base case, if the nod I'm on is null, just return. Otherwise, if the value of the node that I'm on is divisible by 3 & 5, modify it to "FizzBuzz", if it's divisible by 3, change it to "Fizz", and if it's divisible by 5, change it to "Buzz". Once these checks are complete, recursively call the method on the left and right nodes of where I am.
+I used a recursive preorder traversal to go through the entire tree. For my base case, if the nod I'm on is null, just return. Otherwise, if the value of the node that I'm on is divisible by 3 & 5, modify it to "FizzBuzz", if it's divisible by 3, change it to "Fizz", and if it's divisible by 5, change it to "Buzz". Once these checks are complete, recursively call the method on the left and right nodes of where I am.
 
 #### Big O:
 Time: O(n) - each node must be visited once
