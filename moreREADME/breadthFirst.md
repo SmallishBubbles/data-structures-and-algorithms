@@ -19,4 +19,4 @@ Space: O(n) - I am creating a new queue and a new arraylist for this solution, e
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![Whiteboard image](/assets/FizzBuzzTree.jpg)
+![Whiteboard image](/assets/breadthFirst.jpg)
