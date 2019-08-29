@@ -88,6 +88,26 @@ public class BinaryTree<T> {
         return array;
     }
 
+    public Integer findMaximumValue(){
+        if ( this.root == null ) {
+            return null;
+        } else {
+            return findMaximumValueHelper(this.root, (Integer)this.root.value);
+        }
+    }
+
+    private Integer findMaximumValueHelper(Node<T> node, Integer maxSoFar) {
+        if ( node != null ) {
+            if ( (Integer)node.value > maxSoFar ) {
+                maxSoFar = (Integer)node.value;
+            }
+            maxSoFar = findMaximumValueHelper(node.left, maxSoFar);
+            maxSoFar = findMaximumValueHelper(node.right, maxSoFar);
+        }
+        return maxSoFar;
+    }
+
+
 
     public static ArrayList breadthFirst(BinaryTree tree) {
         ArrayList arrayList = new ArrayList<>();
