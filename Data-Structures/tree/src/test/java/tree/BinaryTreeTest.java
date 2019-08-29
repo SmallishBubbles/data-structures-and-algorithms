@@ -192,6 +192,30 @@ public class BinaryTreeTest {
     }
 
     @Test
+    public void findMaximumValue_negativeNumbers() {
+
+        /*
+                -7
+                / \
+              -1   -9
+              / \
+            -2   -8
+
+         */
+        testTree = new BinaryTree<>(
+                new Node<Integer>(-7,
+                        new Node<Integer>(-1,
+                                new Node<Integer>(-2),
+                                new Node<Integer>(-8)),
+                        new Node<Integer>(-8)));
+
+
+        assertEquals("findMaxValue should return the largest value in the tree",
+                (Integer)(-1), testTree.findMaximumValue());
+    }
+
+
+    @Test
     public void findMaximumValue_empty() {
 
         testTree = new BinaryTree<>();
