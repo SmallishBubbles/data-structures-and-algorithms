@@ -28,6 +28,7 @@ Data structure and algorithm labs from:
   * ##### Binary Tree and Binary Search Tree Implementations
   * ##### [FizzBuzzTree](/moreREADME/fizzBuzzTree.md)
   * ##### [Breadth First Traversal](/moreREADME/breadthFirst.md)
+  * ##### [Find Maximum Value](/moreREADME/findMaxValueTree.md)
 
 # Collaborators
 <!-- list everyone I pair program with and ask questions of -->

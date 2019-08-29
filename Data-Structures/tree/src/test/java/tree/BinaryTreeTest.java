@@ -137,4 +137,98 @@ public class BinaryTreeTest {
         assertEquals("should return an empty list",
                 emptyTreeExpected, BinaryTree.breadthFirst(emptyTree));
     }
+
+
+    @Test
+    public void findMaximumValue_inMiddle() {
+        assertEquals("findMaxValue should return the largest value in the tree",
+                (Integer)9, testTree.findMaximumValue());
+    }
+
+    @Test
+    public void findMaximumValue_atBottom() {
+
+        /*
+                7
+               / \
+              4   9
+             / \
+            2   17
+
+         */
+        testTree = new BinaryTree<>(
+                new Node<Integer>(7,
+                        new Node<Integer>(4,
+                                new Node<Integer>(2),
+                                new Node<Integer>(17)),
+                        new Node<Integer>(9)));
+
+
+        assertEquals("findMaxValue should return the largest value in the tree",
+                (Integer)17, testTree.findMaximumValue());
+    }
+
+    @Test
+    public void findMaximumValue_atRoot() {
+
+        /*
+                21
+               / \
+              4   9
+             / \
+            2   17
+
+         */
+        testTree = new BinaryTree<>(
+                new Node<Integer>(21,
+                        new Node<Integer>(4,
+                                new Node<Integer>(2),
+                                new Node<Integer>(17)),
+                        new Node<Integer>(9)));
+
+
+        assertEquals("findMaxValue should return the largest value in the tree",
+                (Integer)21, testTree.findMaximumValue());
+    }
+
+    @Test
+    public void findMaximumValue_negativeNumbers() {
+
+        /*
+                -7
+                / \
+              -1   -9
+              / \
+            -2   -8
+
+         */
+        testTree = new BinaryTree<>(
+                new Node<Integer>(-7,
+                        new Node<Integer>(-1,
+                                new Node<Integer>(-2),
+                                new Node<Integer>(-8)),
+                        new Node<Integer>(-8)));
+
+
+        assertEquals("findMaxValue should return the largest value in the tree",
+                (Integer)(-1), testTree.findMaximumValue());
+    }
+
+
+    @Test
+    public void findMaximumValue_empty() {
+
+        testTree = new BinaryTree<>();
+
+        assertEquals("findMaxValue should return the largest value in the tree",
+                (Integer)null, testTree.findMaximumValue());
+    }
+
+    @Test ( expected = ClassCastException.class )
+    public void findMaximumValue_nonNumber() {
+
+        // calling findMaximumValue on a tree of non numbers should throw an error
+
+        unbalancedTree.findMaximumValue();
+    }
 }
