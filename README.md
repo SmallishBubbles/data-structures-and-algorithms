@@ -30,6 +30,10 @@ Data structure and algorithm labs from:
   * ##### [Breadth First Traversal](/moreREADME/breadthFirst.md)
   * ##### [Find Maximum Value](/moreREADME/findMaxValueTree.md)
 
+### algorithms
+* ##### [Insertion Sort](/moreREADME/InsertionSort.md)
+
+
 # Collaborators
 <!-- list everyone I pair program with and ask questions of -->
 * Brandon Hurrington
