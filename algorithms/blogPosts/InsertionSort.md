@@ -14,7 +14,11 @@ On average and in the worst case, insertion sort has a runtime of O(n^2). Howeve
 ![Insertion sort gif](https://thumbs.gfycat.com/DenseBaggyIbis-size_restricted.gif)
 
 ## Algorithm
-**will be added later**
+1. Assume that the first item in the array is already sorted
+2. Save the next item as a temp variable
+3. Check the temp variable against the sorted items, moving sorted items up one spot if our temp is smaller than them
+4. When we find a spot where temp is larger than the next item, insert it here
+5. Move to the next unsorted item and repeat.
 
 ## Pseudocode
 ```
@@ -33,12 +37,6 @@ InsertionSort(int[] arr)
 ```
 
 ## Readings and References
-#### Watch
-* Video
 
 #### Read
-* Article 1
-* Article 2
-
-#### Bookmark
-* Website
+* [Insertion sort](https://www.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort)

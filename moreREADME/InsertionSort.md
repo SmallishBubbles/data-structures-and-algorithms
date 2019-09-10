@@ -1,5 +1,5 @@
 # Challenge Summary
-### [Code](/algorithms/src/main/java/algorithms/InsertionSort.java) | [Tests](/algorithms/src/test/java/algorithms/InsertionSortTest.java) | [Blog/Teaching](/algorithms/blogPosts/InsertionSort.md)
+### [Code](/algorithms/src/main/java/algorithms/Sort.java) | [Tests](/algorithms/src/test/java/algorithms/SortTest.java) | [Blog/Teaching](/algorithms/blogPosts/InsertionSort.md)
 
 * Complete a working, tested implementation of Insertion Sort, based on the pseudo code provided
 * Create a blog post on understanding the Insertion Sort Algorithm suitable for a 301 level student. Alternately, prepare a presentation that presents the algorithm in a novel way. E.g. a short skit, live mini-lecture, interpretive dance.

@@ -32,6 +32,7 @@ Data structure and algorithm labs from:
 
 ### algorithms
 * ##### [Insertion Sort](/moreREADME/InsertionSort.md)
+* ##### [Merge Sort](/moreREADME/MergeSort.md)
 
 
 # Collaborators
