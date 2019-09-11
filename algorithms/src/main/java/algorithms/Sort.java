@@ -32,45 +32,6 @@ public class Sort {
 
 
     public static int[] mergeSort(int[] arr){
-        /*
-        ALGORITHM Mergesort(arr)
-            DECLARE n <-- arr.length
-
-            if n > 1
-              DECLARE mid <-- n/2
-              DECLARE left <-- arr[0...mid]
-              DECLARE right <-- arr[mid...n]
-              // sort the left side
-              Mergesort(left)
-              // sort the right side
-              Mergesort(right)
-              // merge the sorted left and right sides together
-              Merge(left, right, arr)
-
-        ALGORITHM Merge(left, right, arr)
-            DECLARE i <-- 0
-            DECLARE j <-- 0
-            DECLARE k <-- 0
-
-            while i < left.length && j < right.length
-                if left[i] <= right[j]
-                    arr[k] <-- left[i]
-                    i <-- i + 1
-                else
-                    arr[k] <-- right[j]
-                    j <-- j + 1
-
-                k <-- k + 1
-
-            if i = left.length
-               set remaining entries in arr to remaining values in right
-            else
-               set remaining entries in arr to remaining values in left
-
-            time: O(log(n))
-            space: O(n log(n))
-         */
-
         int n = arr.length;
 
         if ( n > 1 ) {
@@ -80,9 +41,7 @@ public class Sort {
             mergeSort(left);
             mergeSort(right);
             merge(left, right, arr);
-
         }
-
         return arr;
     }
 
@@ -125,6 +84,38 @@ public class Sort {
         }
 
         return arr;
+    }
+
+
+
+
+    public static int[] quickSort(int[] arr, int left, int right) {
+        if (left < right) {
+            int position = partition(arr, left, right);
+            quickSort(arr, left, position - 1);
+            quickSort(arr, position + 1, right);
+        }
+
+        return arr;
+    }
+
+    private static int partition(int[] arr, int left, int right) {
+        int pivot = arr[right];
+        int low = left - 1;
+        for (int i=left; i < right; i++) {
+            if (arr[i] <= pivot) {
+                low ++;
+                swap(arr, i, low);
+            }
+        }
+        swap(arr, right, low + 1);
+        return low + 1;
+    }
+
+    private static void swap(int[] arr, int i, int low) {
+        int temp = arr[i];
+        arr[i] = arr[low];
+        arr[low] = temp;
     }
 
 }
