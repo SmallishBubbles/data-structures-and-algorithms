@@ -21,14 +21,16 @@ public class HashTable<K, V> {
 
     private int hash(K key) {
         int hashValue = 0;
+
         String stringyKey = key + "";
         char[] letters = stringyKey.toCharArray();
-        for( int i = 0; i<letters.length; i++) {
+        for (int i = 0; i < letters.length; i++) {
             hashValue += letters[i];
         }
 
         hashValue = (hashValue * 599) % map.length;
         return hashValue;
+
     }
 
     public void add(K key, V value) {
