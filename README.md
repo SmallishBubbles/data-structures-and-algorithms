@@ -27,6 +27,7 @@ Data structure and algorithm labs from:
   * ##### [Find Maximum Value](/moreREADME/findMaxValueTree.md)
 
 * #### [Hash Tables](/moreREADME/hashTable.md)
+  * ##### [Find first repeated word](/moreREADME/repeatedWord.md)
 
 ### algorithms
 * ##### [Insertion Sort](/moreREADME/InsertionSort.md)
