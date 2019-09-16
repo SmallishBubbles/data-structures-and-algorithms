@@ -14,21 +14,19 @@ Data structure and algorithm labs from:
 
 ### Data-Structures
 * #### [Linked List](/moreREADME/linkedList.md)
-  * ##### Linked List Insertions
-  * ##### Linked List kthFromEnd
-  * ##### Linked List mergeLists
 
 * #### [Stacks and Queues](/moreREADME/stacksAndQueues.md)
-  * ##### Stack and Queue implementations
   * ##### [PseudoQueue implementation](/moreREADME/pseudoQueue.md)
   * ##### [AnimalShelter](/moreREADME/animalShelter.md)
   * ##### [MulitBracketValidation](/moreREADME/multiBracketValidation.md)
 
 * #### [Trees](/moreREADME/trees.md)
-  * ##### Binary Tree and Binary Search Tree Implementations
+
   * ##### [FizzBuzzTree](/moreREADME/fizzBuzzTree.md)
   * ##### [Breadth First Traversal](/moreREADME/breadthFirst.md)
   * ##### [Find Maximum Value](/moreREADME/findMaxValueTree.md)
+
+* #### [Hash Tables](/moreREADME/hashTable.md)
 
 ### algorithms
 * ##### [Insertion Sort](/moreREADME/InsertionSort.md)
