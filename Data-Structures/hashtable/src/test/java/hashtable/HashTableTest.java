@@ -67,8 +67,23 @@ public class HashTableTest {
         exampleHashTable.add("fifth value", "5");
         exampleHashTable.add("sixth value", "6");
         exampleHashTable.add("seventh value", "7");
+        exampleHashTable.add("eighth value", "8");
+        exampleHashTable.add("ninth value", "9");
+        exampleHashTable.add("tenth value", "10");
+        exampleHashTable.add("eleventh value", "11");
 
         assertTrue("A key in the table should return true", exampleHashTable.contains("sixth value"));
         assertFalse("A key not in the table should return false", exampleHashTable.contains("free cake"));
+    }
+
+    @Test
+    public void test_integers() {
+        HashTable<Integer, Boolean> intHashTable = new HashTable<>(10);
+        intHashTable.add(1, false);
+        intHashTable.add(2, false);
+        intHashTable.add(3, false);
+        intHashTable.add(11, false);
+        intHashTable.add(500, false);
+        System.out.println(intHashTable.map.length);
     }
 }
