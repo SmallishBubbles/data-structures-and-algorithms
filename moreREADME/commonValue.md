@@ -11,4 +11,4 @@ Time: lots of O(n) (tree traversals and loops)
 Space: O(n) (hash table)
 
 ## Solution
-#### [Code](/Data-Structures/hashtable/src/main/java/hashtable/RepeatedWord/RepeatedWord.java)  |  [Tests](/Data-Structures/hashtable/src/test/java/hashtable/RepeatedWord/RepeatedWordTest.java)
+#### [Code](/Data-Structures/hashtable/src/main/java/hashtable/TreeIntersection/TreeIntersection.java)  |  [Tests](/Data-Structures/hashtable/src/test/java/hashtable/TreeIntersection/TreeIntersectionTest.java)
