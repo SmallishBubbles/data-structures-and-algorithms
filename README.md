@@ -29,6 +29,7 @@ Data structure and algorithm labs from:
 * #### [Hash Tables](/moreREADME/hashTable.md)
   * ##### [Find first repeated word](/moreREADME/repeatedWord.md)
   * ##### [Common Values in Trees](/moreREADME/commonValue.md)
+  * ##### [Left Join](/moreREADME/leftJoin.md)
 
 ### algorithms
 * ##### [Insertion Sort](/moreREADME/InsertionSort.md)
