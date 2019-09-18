@@ -1,6 +1,6 @@
 # Hashmap LEFT JOIN
 Implement a simplified LEFT JOIN for 2 Hashmaps.
-#### [Code](/Data-Structures/hashtable/src/main/java/hashtable/RepeatedWord/RepeatedWord.java) | [Test](Data-Structures/hashtable/src/test/java/hashtable/RepeatedWord/RepeatedWordTest.java)
+#### [Code](/Data-Structures/hashtable/src/main/java/hashtable/LeftJoin/LeftJoin.java) | [Test](Data-Structures/hashtable/src/test/java/hashtable/LeftJoin/LeftJoinTest.java)
 
 ## Challenge
 * Write a function that LEFT JOINs two hashmaps into a single data structure.
