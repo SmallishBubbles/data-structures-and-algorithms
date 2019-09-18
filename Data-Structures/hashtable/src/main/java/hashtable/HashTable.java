@@ -1,5 +1,6 @@
 package hashtable;
 
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 public class HashTable<K, V> {
@@ -72,6 +73,14 @@ public class HashTable<K, V> {
         }
     }
 
-
+    public ArrayList<Node<K,V>> itteratable() {
+        ArrayList<Node<K,V>> allItems = new ArrayList<>();
+        for ( int i = 0; i < this.map.length; i++ ) {
+            if ( this.map[i] != null ) {
+                allItems.add(this.map[i]);
+            }
+        }
+        return allItems;
+    }
 
 }
