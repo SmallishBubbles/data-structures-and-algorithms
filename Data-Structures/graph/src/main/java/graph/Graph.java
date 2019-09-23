@@ -48,4 +48,33 @@ public class Graph<T> {
         return this.adjacencyList.size();
     }
 
+    public List<Vertex<T>> breadthFirst(Vertex<T> vertex) {
+        HashSet<Vertex<T>> visited = new HashSet<>();
+        List<Vertex<T>> breadthFirstVertices = new LinkedList<>();
+        Queue<Vertex<T>> queue = new LinkedList<>();
+
+        // add starting vertex to queue and visited
+        queue.add(vertex);
+        visited.add(vertex);
+
+        // while the queue has something in it
+        while ( queue.peek() != null ) {
+            // take the first thing out of the queue, set it as current, and add it to breadthFirstVertices
+            Vertex<T> current = queue.remove();
+            breadthFirstVertices.add(current);
+
+            // loop through the current's edges
+            for ( Edge<T> edge : this.adjacencyList.get(current) ) {
+                // if the connected vertex has NOT been visited before
+                if ( !visited.contains(edge.getVertex()) ) {
+                    // add it to visited and the queue
+                    queue.add(edge.getVertex());
+                    visited.add(edge.getVertex());
+                }
+            }
+        }
+
+        return breadthFirstVertices;
+    }
+
 }

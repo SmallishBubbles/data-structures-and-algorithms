@@ -117,4 +117,55 @@ public class GraphTest {
 
     }
 
+
+    @Test
+    public void testBreadthFirst() {
+        Vertex<String> pandora = testGraph.addVertex("Pandora");
+        Vertex<String> arendelle = testGraph.addVertex("Arendelle");
+        Vertex<String> metroville = testGraph.addVertex("Metroville");
+        Vertex<String> monstroplolis = testGraph.addVertex("Monstroplolis");
+        Vertex<String> narnia = testGraph.addVertex("Narnia");
+        Vertex<String> naboo = testGraph.addVertex("Naboo");
+
+        testGraph.addEdge(pandora, arendelle, 1);
+        testGraph.addEdge(arendelle, metroville, 1);
+        testGraph.addEdge(arendelle, monstroplolis, 1);
+        testGraph.addEdge(metroville, monstroplolis, 1);
+        testGraph.addEdge(metroville, narnia, 1);
+        testGraph.addEdge(metroville, naboo, 1);
+        testGraph.addEdge(monstroplolis, naboo, 1);
+        testGraph.addEdge(narnia, naboo, 1);
+
+        assertEquals("Breadth first traversal should return in breadth first order and with no duplicates",
+                "[Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo]", testGraph.breadthFirst(pandora).toString());
+    }
+
+    @Test
+    public void testBreadthFirst_islands() {
+        Vertex<String> kitten = testGraph.addVertex("kitten");
+        Vertex<String> wileyCat = testGraph.addVertex("wiley cat");
+        Vertex<String> cat = testGraph.addVertex("cat");
+        Vertex<String> overgrownCat = testGraph.addVertex("overgrown cat");
+        Vertex<String> lazyCat = testGraph.addVertex("lazy cat");
+        Vertex<String> dog = testGraph.addVertex("dog");
+
+        testGraph.addEdge(kitten, cat, 1);
+        testGraph.addEdge(cat, wileyCat, 1);
+        testGraph.addEdge(cat, overgrownCat, 1);
+        testGraph.addEdge(overgrownCat, lazyCat, 1);
+        testGraph.addEdge(overgrownCat, wileyCat, 1);
+        testGraph.addEdge(wileyCat, lazyCat, 1);
+
+        assertFalse("the breadth first traversal should not contain islands",
+                testGraph.breadthFirst(cat).contains(dog));
+    }
+
+    @Test
+    public void testBreadthFirst_oneVertex() {
+        Vertex<String> evilBob = testGraph.addVertex("Evil Bob");
+
+        assertEquals("If only one item is in the graph, it should be returned",
+                "[Evil Bob]", testGraph.breadthFirst(evilBob).toString());
+    }
+
 }
