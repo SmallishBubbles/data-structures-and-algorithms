@@ -168,4 +168,61 @@ public class GraphTest {
                 "[Evil Bob]", testGraph.breadthFirst(evilBob).toString());
     }
 
+
+    @Test
+    public void testDepthFirstPreorder() {
+        Vertex<String> a = testGraph.addVertex("A");
+        Vertex<String> b = testGraph.addVertex("B");
+        Vertex<String> c = testGraph.addVertex("C");
+        Vertex<String> d = testGraph.addVertex("D");
+        Vertex<String> e = testGraph.addVertex("E");
+        Vertex<String> f = testGraph.addVertex("F");
+        Vertex<String> g = testGraph.addVertex("G");
+        Vertex<String> h = testGraph.addVertex("H");
+
+        testGraph.addEdge(a, d, 1);
+        testGraph.addEdge(a, b, 1);
+        testGraph.addEdge(b, c, 1);
+        testGraph.addEdge(b, d, 1);
+        testGraph.addEdge(c, g, 1);
+        testGraph.addEdge(d, f, 1);
+        testGraph.addEdge(d, h, 1);
+        testGraph.addEdge(f, h, 1);
+        testGraph.addEdge(d, e, 1);
+
+        assertEquals("Breadth first traversal should return in breadth first order and with no duplicates",
+                "[A, B, C, G, D, E, H, F]", testGraph.depthFirstPreorder(a).toString());
+    }
+
+    @Test
+    public void testDepthFirstPreorder_islands() {
+        Vertex<String> kitten = testGraph.addVertex("kitten");
+        Vertex<String> wileyCat = testGraph.addVertex("wiley cat");
+        Vertex<String> cat = testGraph.addVertex("cat");
+        Vertex<String> overgrownCat = testGraph.addVertex("overgrown cat");
+        Vertex<String> lazyCat = testGraph.addVertex("lazy cat");
+        Vertex<String> dog = testGraph.addVertex("dog");
+
+        testGraph.addEdge(kitten, cat, 1);
+        testGraph.addEdge(cat, wileyCat, 1);
+        testGraph.addEdge(cat, overgrownCat, 1);
+        testGraph.addEdge(overgrownCat, lazyCat, 1);
+        testGraph.addEdge(overgrownCat, wileyCat, 1);
+        testGraph.addEdge(wileyCat, lazyCat, 1);
+
+        assertFalse("the breadth first traversal should not contain islands",
+                testGraph.depthFirstPreorder(cat).contains(dog));
+    }
+
+    @Test
+    public void testDepthFirstPreorder_oneVertex() {
+        Vertex<String> evilBob = testGraph.addVertex("Evil Bob");
+
+        assertEquals("If only one item is in the graph, it should be returned",
+                "[Evil Bob]", testGraph.depthFirstPreorder(evilBob).toString());
+    }
+
+
+
+
 }
