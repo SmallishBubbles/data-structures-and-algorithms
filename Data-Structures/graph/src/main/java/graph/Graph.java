@@ -77,4 +77,33 @@ public class Graph<T> {
         return breadthFirstVertices;
     }
 
+    public List<Vertex<T>> depthFirstPreorder(Vertex<T> vertex) {
+        HashSet<Vertex<T>> visited = new HashSet<>();
+        List<Vertex<T>> depthFirstVertices = new LinkedList<>();
+        Stack<Vertex<T>> stack = new Stack<>();
+
+        // add starting vertex to queue and visited
+        stack.add(vertex);
+        visited.add(vertex);
+
+        // while the queue has something in it
+        while ( !stack.isEmpty() ) {
+            // take the first thing out of the queue, set it as current, and add it to breadthFirstVertices
+            Vertex<T> current = stack.pop();
+            depthFirstVertices.add(current);
+
+            // loop through the current's edges
+            for ( Edge<T> edge : this.adjacencyList.get(current) ) {
+                // if the connected vertex has NOT been visited before
+                if ( !visited.contains(edge.getVertex()) ) {
+                    // add it to visited and the queue
+                    stack.add(edge.getVertex());
+                    visited.add(edge.getVertex());
+                }
+            }
+        }
+
+        return depthFirstVertices;
+    }
+
 }

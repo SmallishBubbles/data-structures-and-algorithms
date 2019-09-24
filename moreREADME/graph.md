@@ -19,6 +19,11 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
 * `breadthFirst()`
 
+## Breadth First Traversal
+<!-- Description of the challenge -->
+Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+* `depthFirstPreorder()`
+
 ______
 
 # Approach & Efficiency
@@ -40,6 +45,20 @@ My breadth first traversal uses a `Queue`, a `HashSet`, and a `List`.
 
 #### Whiteboard:
 ![breadth first whiteboard](/assets/graph-breadth-first.jpg)
+
+
+## Depth First Preorder Traversal
+My breadth first traversal uses a `Stack`, a `HashSet`, and a `List`.
+* `Stack` is used for the breadth first traversal to keep track of the traversal order.
+* `HashSet` is used for visited vertices to ensure the same vertex is not visited twice
+* `List` is used as the return type and stores the traversed vertices.
+
+#### Big O Analysis:
+* Time: `O(n^2)` - in the worst case, where every vertex is connected
+* Space: `O(n)`
+
+#### Whiteboard:
+![depth first whiteboard](/assets/graph-depth-first.jpg)
 
 
 ______

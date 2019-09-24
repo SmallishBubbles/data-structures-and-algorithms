@@ -34,6 +34,7 @@ Data structure and algorithm labs from:
 * #### [Graph](/moreREADME/graph.md)
   * ##### [Breadth First Traversal](/moreREADME/graph.md)
   * ##### [Get Edge](/moreREADME/getEdge.md)
+  * ##### [Depth First Preorder Traversal](/moreREADME/graph.md)
 
 
 ### algorithms
